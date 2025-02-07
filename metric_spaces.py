@@ -95,7 +95,48 @@ class EuclideanRealSpace(MetricSpace):
         distance=math.sqrt(np.sum((point1-point2)**2))
         return distance
    
- 
+class ManhattanRealSpace(MetricSpace):
+    '''Metric space class representing n-dimensional Manhattan real space.
+    
+    Parameters
+    ----------
+    dimension : int, default=2
+        The dimension of the space, which should be positive. `dimension=1` is equivalent 
+        to the real line, while `dimension=2` gives the Manhattan plane.
+    '''
+    def __init__(self, dimension: int = 2):
+        return None
+
+    def distance(self, point1: RealPoint, 
+                 point2: RealPoint) -> float:
+        '''Compute the Manhattan distance between two points.
+        
+        Parameters
+        ----------
+        point1, point2 : RealPoint
+            Points in real space, given by numpy arrays of floats.
+        
+        Returns
+        -------
+        distance : float
+            A float representing the Manhattan distance between the given points.
+
+        Examples
+        --------
+        >>> point1 = np.array([0,1])
+        ... point2 = np.array([1,1])
+        ... ManhattanRealSpace(2).distance(point1, point2)
+        1.0
+
+        >>> point1 = np.array([0,0,0,0])
+        ... point2 = np.array([0.5,0.5,0.5,0.5])
+        ... ManhattanRealSpace(4).distance(point1, point2)
+        2.0
+        '''
+        distance=np.sum(np.abs(point1-point2))
+        return distance
+
+
 if __name__ == '__main__':
 
     pass
