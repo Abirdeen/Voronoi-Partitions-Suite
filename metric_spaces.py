@@ -51,6 +51,51 @@ class MetricSpace(ABC, Generic[PointType]):
         '''
         raise NotImplementedError
 
+
+RealPoint: TypeAlias = np.ndarray[Any, np.dtype[np.float64]]
+  
+class EuclideanRealSpace(MetricSpace):
+    '''Metric space class representing n-dimensional Euclidean real space.
+    
+    Parameters
+    ----------
+    dimension : int, default=2
+        The dimension of the space, which should be positive. `dimension=1` gives 
+        the real line, while `dimension=2` gives the plane.
+    '''
+    def __init__(self, dimension: int = 2):
+        return None
+    
+    def distance(self, point1: RealPoint, 
+                 point2: RealPoint) -> float:
+        '''Compute the Euclidean distance between two points.
+        
+        Parameters
+        ----------
+        point1, point2 : RealPoint
+            Points in Euclidean space, given by numpy arrays of floats.
+        
+        Returns
+        -------
+        distance : float
+            A float representing the Euclidean distance between the given points.
+
+        Examples
+        --------
+        >>> point1 = np.array([0,1])
+        ... point2 = np.array([1,1])
+        ... EuclideanRealSpace(2).distance(point1, point2)
+        1.0
+
+        >>> point1 = np.array([0,0,0,0])
+        ... point2 = np.array([0.5,0.5,0.5,0.5])
+        ... EuclideanRealSpace(4).distance(point1, point2)
+        1.0
+        '''
+        distance=math.sqrt(np.sum((point1-point2)**2))
+        return distance
+   
+ 
 if __name__ == '__main__':
 
     pass
