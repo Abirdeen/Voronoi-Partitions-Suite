@@ -73,7 +73,7 @@ class EuclideanRealSpace(MetricSpace):
         Parameters
         ----------
         point1, point2 : RealPoint
-            Points in Euclidean space, given by numpy arrays of floats.
+            Points in real space, given by numpy arrays of floats.
         
         Returns
         -------
