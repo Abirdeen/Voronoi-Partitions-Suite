@@ -3,7 +3,6 @@
 | | |
 | --- | --- |
 | Testing | [![CI - Test](https://github.com/pandas-dev/pandas/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/pandas-dev/pandas/actions/workflows/unit-tests.yml) ![coverage](https://img.shields.io/badge/coverage-0%25-red) |
-| Package |  |
 | Meta | ![version](https://img.shields.io/badge/version-0.0.0-blue) [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/) |
 
 
@@ -46,7 +45,7 @@ Voronoi uses the following technologies and tools:
 ### Current
 Voronoi currently has the following features:
 
-- Nothing, this is the first commit
+- Nothing, this is the initial version
 
 ### Future
 Voronoi plans to add the following features:
