@@ -16,7 +16,9 @@ from abc import (
 import math
 import numpy as np
 
-from metrics.realmetrics import 
+from metric_spaces.metrics.real_metrics import (
+    RealPoint
+)
 
 PointType = TypeVar('PointType')
 Metric: TypeAlias = Callable[[PointType, PointType], float]
