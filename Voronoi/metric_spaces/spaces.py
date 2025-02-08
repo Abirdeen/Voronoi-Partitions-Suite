@@ -46,7 +46,7 @@ class MetricSpace(ABC, Generic[PointType]):
         self.distance = metric
         raise NotImplementedError
     
-    def nearest_neighbours(self, points: Iterable[PointType], givenPoint: PointType, k: int) -> Iterable[PointType]:
+    def nearest_neighbour_search(self, points: Iterable[PointType], givenPoint: PointType, k: int) -> Iterable[PointType]:
         '''Find the `k` nearest neighbours of a given point.
         
         Parameters
