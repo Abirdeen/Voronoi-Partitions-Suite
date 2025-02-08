@@ -29,13 +29,13 @@ def euclidean_metric(point1: RealPoint,
     Examples
     --------
     >>> point1 = np.array([0,1])
-    ... point2 = np.array([1,1])
-    ... euclidean_metric(point1, point2)
+    >>> point2 = np.array([1,1])
+    >>> euclidean_metric(point1, point2)
     1.0
 
     >>> point1 = np.array([0,0,0,0])
-    ... point2 = np.array([0.5,0.5,0.5,0.5])
-    ... euclidean_metric(point1, point2)
+    >>> point2 = np.array([0.5,0.5,0.5,0.5])
+    >>> euclidean_metric(point1, point2)
     1.0
     '''
     distance=math.sqrt(np.sum((point1-point2)**2))
@@ -58,13 +58,13 @@ def manhattan_metric(point1: RealPoint,
     Examples
     --------
     >>> point1 = np.array([0,1])
-    ... point2 = np.array([1,1])
-    ... manhattan_metric(point1, point2)
+    >>> point2 = np.array([1,1])
+    >>> manhattan_metric(point1, point2)
     1.0
 
     >>> point1 = np.array([0,0,0,0])
-    ... point2 = np.array([0.5,0.5,0.5,0.5])
-    ... manhattan_metric(point1, point2)
+    >>> point2 = np.array([0.5,0.5,0.5,0.5])
+    >>> manhattan_metric(point1, point2)
     2.0
     '''
     distance=np.sum(np.abs(point1-point2))
