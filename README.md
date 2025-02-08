@@ -45,15 +45,17 @@ Voronoi uses the following technologies and tools:
 ### Current
 Voronoi currently has the following features:
 
-- Nothing, this is the initial version
+- Nothing, this is the initial version.
 
 ### Future
 Voronoi plans to add the following features:
 
-- Generating Voronoi partitions in suitable metric spaces, via any computable probability distribution
-- Voronoi data sampling for suitable metric spaces
-- Visualisations of Voronoi diagrams in suitable metric spaces
-- Statistical analysis of properties, both for a given process and for analysing particular kinds of process
+- Generating Voronoi partitions in suitable metric spaces, via any computable probability distribution.
+- Voronoi data sampling for suitable metric spaces.
+- Visualisations of Voronoi diagrams in suitable metric spaces.
+- Statistical analysis of properties, both for a given process and for analysing particular kinds of process.
+
+In addition, there will eventually be stub files for mypy typing.
 
 ## Contributing
 
@@ -70,7 +72,7 @@ Aberdeen Powell
 ## Change log
 
 - 0.0.0
-    - Repository created
+    - Repository created.
 
 ## License
 
