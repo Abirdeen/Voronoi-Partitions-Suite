@@ -17,11 +17,14 @@ import math
 import numpy as np
 
 from metric_spaces.metrics.real_metrics import (
-    RealPoint
-)
+    RealPoint,
+    RealMetric
+) #type: ignore[import-untyped]
 
-PointType = TypeVar('PointType')
-Metric: TypeAlias = Callable[[PointType, PointType], float]
+from metric_spaces.metrics.common.types import (
+    PointType, 
+    Metric
+) #type: ignore[import-untyped]
 
 class MetricSpace(ABC, Generic[PointType]):
     '''Helper class that provides a standard way to construct a metric space using inheritance.
