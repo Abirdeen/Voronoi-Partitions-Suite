@@ -68,6 +68,7 @@ class MetricSpace(ABC, Generic[PointType]):
         >>> ???
         
         '''
+        
         raise NotImplementedError
   
 class RealSpace(MetricSpace[RealPoint]):
@@ -78,6 +79,9 @@ class RealSpace(MetricSpace[RealPoint]):
     dimension : int, default=2
         The dimension of the space, which should be positive. `dimension=1` gives 
         a real line, while `dimension=2` gives a plane.
+    metric : RealMetric
+        A metric on real space, which should either be agnostic on dimension, or 
+        match the `dimension` parameter.
     
     '''
     def __init__(self, metric: RealMetric, dimension: int = 2):
